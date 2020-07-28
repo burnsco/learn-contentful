@@ -47,7 +47,6 @@ module.exports = {
     ],
     'no-console': 0,
     'import/prefer-default-export': 0,
-    import: 0,
     'func-names': 0,
     'space-before-function-paren': 0,
     'comma-dangle': 0,
@@ -86,14 +85,6 @@ module.exports = {
       {
         avoidEscape: true,
         allowTemplateLiterals: true,
-      },
-    ],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        printWidth: 80,
       },
     ],
     'jsx-a11y/href-no-hash': 'off',

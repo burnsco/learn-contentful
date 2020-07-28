@@ -1,25 +1,26 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
+    sx={{
+      bg: `primary`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
-      style={{
+      sx={{
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 sx={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
+          sx={{
             color: `white`,
             textDecoration: `none`,
           }}
