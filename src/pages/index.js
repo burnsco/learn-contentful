@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { graphql, useStaticQuery } from 'gatsby'
-import { jsx, Card, Heading } from 'theme-ui'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { jsx, Message, Heading } from 'theme-ui'
 import Layout from '../components/layout'
 
 export default function IndexPage() {
@@ -20,10 +20,18 @@ export default function IndexPage() {
   console.log(data)
   return (
     <Layout>
+      <h1>Lessons</h1>
       {data.nodes.map(lesson => (
-        <Card key={lesson.slug} sx={{ maxWidth: 600 }}>
-          <Heading>{lesson.title}</Heading>
-        </Card>
+        <Message key={`lesson-${lesson.slug}`} sx={{ maxWidth: 600 }}>
+          <Heading as="h4">
+            <Link
+              sx={{ textDecoration: 'none', color: 'carolinablue' }}
+              to={`/${lesson.slug}`}
+            >
+              {lesson.title}
+            </Link>
+          </Heading>
+        </Message>
       ))}
     </Layout>
   )
